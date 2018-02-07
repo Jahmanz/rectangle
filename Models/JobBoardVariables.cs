@@ -30,5 +30,10 @@ namespace JobBoard.Models
     {
       _jobList.Add(this);
     }
+  
+  public static void ClearAll()
+  {
+    _jobList.Clear();
+  }
   }
 }

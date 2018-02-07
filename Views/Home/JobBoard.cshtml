@@ -4,13 +4,23 @@
   <title>Job Board</title>
 </head>
 <body>
+  <div class="container">
   <h1>JobBoard</h1>
   <h3>Job Postings</h3>
   <ul>
+    @if (Model != null)
+    {
     @foreach (var job in Model)
     {
       <li>@job.GetJobPostTitle()<ul><li>@job.GetJobPostDescription()</li></ul></li>
     }
+  }
   </ul>
+  <form action="/jobBoard/delete" method="post">
+ <button type="submit" name="button">Clear All Jobs</button>
+</form>
+<p><a href="/addJob">Add Another Job.</a></p>
+</form>
+</div>
 </body>
 </html>
