@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Board</title>
+</head>
+<body>
+  <h1>JobBoard</h1>
+  <h3>Job Postings</h3>
+  <ul>
+    @foreach (var job in Model)
+    {
+      <li>@job.GetJobPostTitle()<ul><li>@job.GetJobPostDescription()</li></ul></li>
+    }
+  </ul>
+</body>
+</html>
